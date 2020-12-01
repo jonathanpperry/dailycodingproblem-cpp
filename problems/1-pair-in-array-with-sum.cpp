@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #include <unordered_set>
 using namespace std;
 
@@ -8,9 +7,9 @@ void printPairs(int arr[], int arr_size, int sum)
     unordered_set<int> s;
     for (int i = 0; i < arr_size; i++)
     {
-        int temp = sum - arr[i];
+        int neededDiffVal = sum - arr[i];
 
-        if (s.find(temp) != s.end())
+        if (s.find(neededDiffVal) != s.end())
         {
             cout << "There exists a pair adding to the given sum value";
             return;
